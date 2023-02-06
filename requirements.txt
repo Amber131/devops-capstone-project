@@ -1,10 +1,11 @@
 # Pin Werkzeug because it keeps breaking Flask!
-Werkzeug==2.2.2
-SQLAlchemy==2.0
+Werkzeug==2.1.2
 
 # Runtime dependencies
-Flask==2.2.2
+Flask==2.1.2
 Flask-SQLAlchemy==2.5.1
+Flask-Talisman==1.0.0
+Flask-Cors==3.0.10
 psycopg2-binary==2.9.3
 python-dotenv==0.20.0
 
@@ -28,3 +29,5 @@ codecov==2.1.12
 
 # Utilities
 httpie==3.2.1
+
+SQLAlchemy==1.4.46
