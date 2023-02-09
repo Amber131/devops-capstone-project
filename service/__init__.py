@@ -6,6 +6,8 @@ and SQL database
 """
 import sys
 from flask import Flask
+from flask_talisman import Talisman
+from flask_cors import CORS
 from service import config
 from service.common import log_handlers
 
@@ -33,5 +35,11 @@ except Exception as error:  # pylint: disable=broad-except
     app.logger.critical("%s: Cannot continue", error)
     # gunicorn requires exit code 4 to stop spawning workers when they die
     sys.exit(4)
+
+app.logger.info("Service initialized!")
+
+talisman = Talisman(app)
+
+CORS(app)
 
 app.logger.info("Service initialized!")
